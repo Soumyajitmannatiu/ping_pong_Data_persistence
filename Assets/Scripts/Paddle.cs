@@ -1,31 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Paddle : MonoBehaviour
-{
-    public float Speed = 2.0f;
-    public float MaxMovement = 2.0f;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        float input = Input.GetAxis("Horizontal");
-
-        Vector3 pos = transform.position;
-        pos.x += input * Speed * Time.deltaTime;
-
-        if (pos.x > MaxMovement)
-            pos.x = MaxMovement;
-        else if (pos.x < -MaxMovement)
-            pos.x = -MaxMovement;
-
-        transform.position = pos;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1574f9da26998b3eb01581574c4535ddafb6114f33c18e195e6022e8e16d094
+size 672
